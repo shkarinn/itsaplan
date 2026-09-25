@@ -29,7 +29,7 @@ export default function BurnupWidgetSettings({
   const { project } = useShell();
   const days = config.days ?? 90;
   const forecastWeeks = config.forecastWeeks ?? 4;
-  const forecast = config.forecast ?? 'line';
+  const forecast = config.forecast ?? 'range';
   const initiativeId = config.initiativeId ?? null;
   const { data: initiatives } = useInitiativeOptionsQuery(project?.project.key ?? null, {
     include: initiativeId ?? undefined,

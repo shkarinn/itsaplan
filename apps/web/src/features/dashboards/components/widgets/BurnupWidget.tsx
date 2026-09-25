@@ -32,7 +32,7 @@ export default function BurnupWidget({
   const days = config.days ?? 90;
   const forecastWeeks = config.forecastWeeks ?? 4;
   const initiativeId = config.initiativeId ?? null;
-  const range = config.forecast === 'range';
+  const range = config.forecast !== 'line';
   const { data, isLoading } = useBurnupQuery(projectKey, { days, initiativeId, forecastWeeks });
 
   const chartConfig: ChartConfig = {
